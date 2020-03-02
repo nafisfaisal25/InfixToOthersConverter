@@ -22,6 +22,7 @@ public class Converter {
         for(int i=0;i<10;i++){
             mNumberList.add((char) (i+'0'));
         }
+        mNumberList.add('.');
     }
 
     private void initializeMap() {
@@ -52,9 +53,6 @@ public class Converter {
     public void convertInfixToPostfix() {
         setPostFixString("");
         Stack<Character> stack = new Stack<>();
-        if(mInfixString == "") {
-            return;
-        }
         for(int i=0;i<mInfixString.length();i++){
             if(mNumberList.contains(mInfixString.charAt(i))) {
                 mPostFixString += mInfixString.charAt(i);
@@ -81,6 +79,19 @@ public class Converter {
         while (!stack.isEmpty()) {
             mPostFixString += " " + stack.pop();
         }
+
+        removeExtraSpaces();
+    }
+
+    private void removeExtraSpaces() {
+        String temp = "";
+        for(int i = 0;i<mPostFixString.length()-1;i++) {
+            if(mPostFixString.charAt(i) != ' ') {
+                temp += mPostFixString.charAt(i) + " ";
+            }
+        }
+        temp+=mPostFixString.charAt(mPostFixString.length()-1);
+        mPostFixString = temp;
     }
 
     public void convertInfixToPostfix(String string) {
