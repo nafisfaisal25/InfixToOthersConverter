@@ -1,6 +1,7 @@
 package com.example.infixtoothersconverter;
 
 import android.app.Activity;
+import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -113,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         mEvaluatedValueOutput.setVisibility(View.VISIBLE);
         mEvaluatedValueOutput.setText("");
         TextView textView = findViewById(R.id.postfix_value_string);
+
         textView.setVisibility(View.VISIBLE);
     }
 
