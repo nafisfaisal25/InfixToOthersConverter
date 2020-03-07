@@ -115,9 +115,12 @@ public class MainActivity extends AppCompatActivity {
         mEvaluatedValueOutput.setText("");
         TextView textView = findViewById(R.id.postfix_value_string);
 
+<<<<<<< HEAD
         textView.setVisibility(View.VISIBLE);
     }
 
+=======
+>>>>>>> df934c44c7a43c3e8d456add963b19052871e0a5
     private void evaluatePostFixValue() {
         double value = mEvaluator.evaluatePostFix((mConverter.getPostFixString()));
         mEvaluatedValueOutput.setText(Double.toString(value));
