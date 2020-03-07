@@ -85,7 +85,6 @@ public class Converter {
 
     private void removeExtraSpaces() {
         String temp = "";
-<<<<<<< HEAD
         int i = 0;
         while(true) {
             if(mPostFixString.charAt(i) != ' ') {
@@ -100,14 +99,7 @@ public class Converter {
                 temp += mPostFixString.charAt(i);
             }
         }
-=======
-        for(int i = 0;i<mPostFixString.length()-1;i++) {
-            if(mPostFixString.charAt(i) != ' ') {
-                temp += mPostFixString.charAt(i) + " ";
-            }
-        }
         temp+=mPostFixString.charAt(mPostFixString.length()-1);
->>>>>>> df934c44c7a43c3e8d456add963b19052871e0a5
         mPostFixString = temp;
     }
 
